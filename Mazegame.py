@@ -117,7 +117,7 @@ class Avatar:
 
 
 def main(maze_layout):
-    
+
     maze = Maze(maze_layout)
     goal = Goal(2, 3)
     avatar = Avatar(1, 1)
@@ -128,9 +128,26 @@ def main(maze_layout):
         move = input("Enter your move (W/A/S/D): ").strip()
         avatar.move(move, maze)
 
-    maze.display(avatar=avatar, goal=goal)
+        maze.display(avatar=avatar, goal=goal)
     print("Congratulations! You've reached the goal!")
 
 
 if __name__ == "__main__":
     main(MAZE)
+
+import tkinter as tk
+from PIL import Image, ImageTk
+from tkinter import messagebox
+
+class MazeGUI:
+    def __init__(self, root, logic):
+        self.root = root
+        self.logic = logic 
+        self.root.wm_title("Maze Game")
+        self.root.iconphoto(True, ImageTk.PhotoImage(file= 'my_image.png'))
+
+def main ():
+    root = tk.Tk()
+    logic = MazeLogic()
+    maze_gui=MazeGUI (root,logic)
+    root.mainloop()
