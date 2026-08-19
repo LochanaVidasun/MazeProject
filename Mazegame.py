@@ -135,19 +135,3 @@ def main(maze_layout):
 if __name__ == "__main__":
     main(MAZE)
 
-import tkinter as tk
-from PIL import Image, ImageTk
-from tkinter import messagebox
-
-class MazeGUI:
-    def __init__(self, root, logic):
-        self.root = root
-        self.logic = logic 
-        self.root.wm_title("Maze Game")
-        self.root.iconphoto(True, ImageTk.PhotoImage(file= 'my_image.png'))
-
-def main ():
-    root = tk.Tk()
-    logic = MazeLogic()
-    maze_gui=MazeGUI (root,logic)
-    root.mainloop()
