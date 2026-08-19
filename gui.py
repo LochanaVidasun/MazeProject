@@ -29,6 +29,7 @@ class MazeGUI:
         tk.Button(self.root, text="Left").grid(row=5, column=0)
         tk.Button(self.root, text="Right").grid(row=5, column=2)
 
+        #Menu bar =
         self. menubar = tk. Menu (self.root)
         self. helpmenu = tk.Menu (self.menubar, tearoff = 0)
         self. helpmenu.add_command(label="Help", command=lambda: messagebox.showinfo ("Help", "This is the help message."))
