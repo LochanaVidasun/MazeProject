@@ -10,12 +10,12 @@ class MazeGUI:
 
         #Grid positioning  
         self.label = tk.Label(self.root, text="Welcome to the Maze Game!")
-        self.label.grid(row=0, column=0)
+        self.label.grid(row=0, column=0, columnspan=3, rowspan=3)
 
         #Canvas Drawing = 
 
-        self.canvas = tk.Canvas(self.root, width=300, height=300, bg="white")
-        self.canvas.grid(row=1, column=0, columnspan=4, rowspan=3)
+        self.canvas = tk.Canvas(self.root, width=600, height=650, bg="white")
+        self.canvas.grid(row=1, column=0, columnspan=3, rowspan=3)
 
         self.canvas.create_rectangle (0, 0, 50, 50, fill="blue")
 
@@ -24,10 +24,10 @@ class MazeGUI:
 
         #Event Handling =
 
-        tk.Button(self.root, text="Up").grid(row=4, column=1)
-        tk.Button(self.root, text="Down").grid(row=6, column=1)
-        tk.Button(self.root, text="Left").grid(row=5, column=0)
-        tk.Button(self.root, text="Right").grid(row=5, column=2)
+        btn_up=tk.Button(self.root, text="Up").grid(row=4, column=1)
+        btn_down=tk.Button(self.root, text="Down").grid(row=6, column=1)
+        btn_left=tk.Button(self.root, text="Left").grid(row=5, column=0)
+        btn_right=tk.Button(self.root, text="Right").grid(row=5, column=2)
 
         #Menu bar =
         self. menubar = tk. Menu (self.root)
